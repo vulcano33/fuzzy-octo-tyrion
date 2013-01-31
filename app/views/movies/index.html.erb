@@ -1,5 +1,17 @@
 <h1>Listing movies</h1>
 
+<div id="movieCarousel" class="carousel slide">
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="active item"><%= image_tag "banner/drive_angry_banner.jpg" %></div>
+    <div class="item"><%= image_tag "banner/megamind_banner.jpg" %></div>
+    <div class="item"><%= image_tag "banner/scary_movie_banner.jpg" %></div>
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left " href="#movieCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#movieCarousel" data-slide="next">&rsaquo;</a>
+</div>
+
 <table>
   <tr>
     <th>Name</th>
