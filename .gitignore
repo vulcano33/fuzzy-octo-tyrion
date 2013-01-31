@@ -1,0 +1,25 @@
+public/user_photo
+.DS_Store
+.bundle
+log/*.log
+tmp/**/*
+config/database.yml
+TODO.local.txt
+.~lock*
+vendor/bundle
+.idea/
+.rvmrc
+#Linux temp files
+*~
+*.sql
+*.sqlite
+*.sqlite3
+public/system
+/public/system*
+public/uploads
+.sass-cache/
+.jhw-cache/
+config/app_config.yml
+/*.csv
+
+
