@@ -6,9 +6,33 @@ gem 'rails', '3.2.8'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-gem 'therubyracer'
 gem "less-rails"
 gem 'mysql2'
+gem 'bootstrap-sass', '~> 2.1.0.0' # must specify version
+gem 'haml'
+gem "thin"
+
+group :development do
+  gem 'hirb'
+  gem 'wirble'
+  gem 'wirb'
+  gem 'haml-rails'
+  gem 'quiet_assets'
+end
+
+group :test do
+  gem "rspec-rails"
+  gem "capybara"
+  gem 'capybara-webkit'
+  gem 'shoulda-matchers'
+  gem 'database_cleaner'
+  gem 'spork-rails'
+end
+
+# Both test and development
+gem "awesome_print", :group => [:development, :test]
+gem 'factory_girl_rails', :group => [:development, :test]
+gem 'faker', :group => [:development, :test]
 
 
 # Gems used only for assets and not required
@@ -16,10 +40,7 @@ gem 'mysql2'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
+  gem 'therubyracer', :platforms => :ruby
   gem 'uglifier', '>= 1.0.3'
   gem "twitter-bootstrap-rails"
 end

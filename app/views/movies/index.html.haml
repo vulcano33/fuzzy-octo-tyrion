@@ -1,0 +1,62 @@
+.navbar
+  .navbar-inner
+    .container
+      %a.btn.btn-navbar{'data-toggle' => "collapse",  'data-target' => ".nav-collapse"}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      = link_to 'Moview', '#', class: 'brand'
+      .nav-collapse.in.collapse
+        %ul.nav
+          %li.active
+            = link_to 'Home', '#'
+          %li
+            = link_to 'Profile', '#'
+          %li
+            = link_to 'Messages', '#'
+.row-fluid
+  .span12
+    %h1 Movies
+    #movieCarousel.carousel.slide
+      .carousel-inner
+        .active.item
+          = image_tag "banner/drive_angry_banner.jpg"
+          .carousel-caption
+            %p Caption content here!...
+            =link_to 'More info', '#'
+        .item
+          = image_tag "banner/megamind_banner.jpg"
+          .carousel-caption
+            %p Caption content here!
+            =link_to 'More info', '#'
+        .item
+          = image_tag "banner/scary_movie_banner.jpg"
+          .carousel-caption
+            %p Caption content here!
+            =link_to 'More info', '#'
+      %a.carousel-control.left{"data-slide" => "prev", :href => "#movieCarousel"} &lsaquo;
+      %a.carousel-control.right{"data-slide" => "next", :href => "#movieCarousel"} &rsaquo;
+    %table
+      %tr
+        %th Name
+        %th Rate
+        %th Description
+        %th Director
+        %th Genre
+        %th Year
+        %th
+        %th
+        %th
+      - @movies.each do |movie|
+        %tr
+          %td= movie.name
+          %td= movie.rate
+          %td= movie.description
+          %td= movie.director
+          %td= movie.genre
+          %td= movie.year
+          %td= link_to 'Show', movie
+          %td= link_to 'Edit', edit_movie_path(movie)
+          %td= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' }
+    %br
+    = link_to 'New Movie', new_movie_path

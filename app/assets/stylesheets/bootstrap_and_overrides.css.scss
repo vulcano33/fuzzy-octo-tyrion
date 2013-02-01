@@ -1,0 +1,39 @@
+//$bodyBackground: #E2E3E3;
+//$tableBorder: #CBCACA;
+//$tableBackground: #F1F1F1;
+//$tableBackgroundHover: #FEFEFE;
+//$headingsColor: #46A8B9;
+//$formActionsBackground: none;
+
+@import "bootstrap";
+@import "bootstrap-responsive";
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 60px;
+}
+
+.carousel .container {
+  position: relative;
+  z-index: 9;
+}
+
+.carousel-control {
+  height: 80px;
+  margin-top: 0;
+  font-size: 120px;
+  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+  background-color: transparent;
+  border: 0;
+}
+
+.carousel .item {
+  height: 750px;
+}
+.carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 100%;
+}

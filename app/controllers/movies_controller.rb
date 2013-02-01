@@ -5,7 +5,7 @@ class MoviesController < ApplicationController
     @movies = Movie.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # index.html.haml
       format.json { render json: @movies }
     end
   end
